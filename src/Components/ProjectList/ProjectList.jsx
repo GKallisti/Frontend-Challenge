@@ -12,7 +12,7 @@ const ProjectsList = ({ handleBackClick, handleClick }) => {
 
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = allProjects.slice(indexOfFirstProject, indexOfLastProject);
+  let currentProjects = allProjects.slice(indexOfFirstProject, indexOfLastProject);
 
   const totalPages = Math.ceil(projects.length / projectsPerPage);
 
@@ -31,7 +31,7 @@ const ProjectsList = ({ handleBackClick, handleClick }) => {
   }
 
   const deleteProject = () => {
-    allProjects = allProjects.filter(p => p.name !== selectedProject)
+    setAllProjects(allProjects.filter(p => p.name !== selectedProject))
   }
 
   const handleDeleteClick = () => {
@@ -41,7 +41,7 @@ const ProjectsList = ({ handleBackClick, handleClick }) => {
   }
 
   useEffect(() => {
-
+    currentProjects = allProjects.slice(indexOfFirstProject, indexOfLastProject);
   }, [allProjects])
 
   return (
