@@ -1,27 +1,23 @@
-
-
 .navbar {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 60px; /* Ajusta la altura según tus necesidades */
-    padding: 0 20px;
-    background-color: #333; /* Cambia el color de fondo según tus preferencias */
-    position: absolute;
-		display: block;
-		top: 2.5em;
-		left: 0;
-		width: 100%;
-		text-align: center;
-  }
-  
-  .logout-button {
-    background-color: #f00; /* Cambia el color según tus preferencias */
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    border-radius: 0.35em;
-    box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
-    padding: 1em;
-  }
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 80px;
+  background-color: #333;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 1em;
+  /* left: 0; */
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.logout-button {
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.35em;
+  padding: 1em;
+}

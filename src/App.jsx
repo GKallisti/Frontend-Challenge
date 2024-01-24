@@ -4,12 +4,15 @@ import React, { useState } from 'react';
 import LandingPage from './Views/LandingPage/LandingPage.jsx';
 import Home from './Views/Home/Home.jsx';
 import { AuthProvider } from './Authcontext.jsx';
+import { BrowserRouter } from 'react-router-dom';
 
 
 const App = () => {
   return (
     <AuthProvider>
-      <AppContent />
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
     </AuthProvider>
   );
 };
@@ -29,7 +32,7 @@ const AppContent = () => {
   return (
     <div>
       {isLoggedIn ? (
-        <Home onLogoutClick={handleLogoutClick} />  // Pasa la función de logout como prop
+        <Home onLogoutClick={handleLogoutClick} />
       ) : (
         <LandingPage onLoginClick={handleLoginClick} />
       )}
